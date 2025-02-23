@@ -52,6 +52,11 @@ public class FileHandler {
         return count;
     }
 
+    /**
+     * Counts the amount of words in a file line by line.
+     * @return The number of words
+     * @throws FileNotFoundException if the file does not exist.
+     */
     public int getFileWordCount() throws FileNotFoundException {
         Scanner scanner = new Scanner(this.file);
 

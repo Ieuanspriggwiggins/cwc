@@ -51,4 +51,21 @@ public class FileHandler {
         }
         return count;
     }
+
+    public int getFileWordCount() throws FileNotFoundException {
+        Scanner scanner = new Scanner(this.file);
+
+        int count = 1;
+
+        while(scanner.hasNextLine()){
+            String line = scanner.nextLine();
+            for(char c : line.toCharArray()){
+                if(c == ' ' || c == '\n' || c == '\r'){
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
 }

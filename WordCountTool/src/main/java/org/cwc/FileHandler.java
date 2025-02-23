@@ -21,56 +21,5 @@ public class FileHandler {
         this.file = new File(filename);
     }
 
-    /**
-     * Returns the amount of lines present in a given file. Will return 0 by default.
-     * @return - amount of lines present in file
-     * @throws FileNotFoundException - if the file is not found.
-     */
-    public int getFileLineCount() throws FileNotFoundException {
-        Scanner scanner = new Scanner(this.file);
 
-        int count = 0;
-        while(scanner.hasNextLine()){
-            count++;
-        }
-
-        return count;
-    }
-
-    /**
-     * Returns the amount of bytes present in a file.
-     * @return - the number of bytes as an integer.
-     * @throws FileNotFoundException - If the file does not exist.
-     */
-    public int getFileByteCount() throws FileNotFoundException {
-        Scanner scanner = new Scanner(this.file);
-
-        int count = 0;
-        while(scanner.hasNextByte()){
-            count++;
-        }
-        return count;
-    }
-
-    /**
-     * Counts the amount of words in a file line by line.
-     * @return The number of words
-     * @throws FileNotFoundException if the file does not exist.
-     */
-    public int getFileWordCount() throws FileNotFoundException {
-        Scanner scanner = new Scanner(this.file);
-
-        int count = 1;
-
-        while(scanner.hasNextLine()){
-            String line = scanner.nextLine();
-            for(char c : line.toCharArray()){
-                if(c == ' ' || c == '\n' || c == '\r'){
-                    count++;
-                }
-            }
-        }
-
-        return count;
-    }
 }

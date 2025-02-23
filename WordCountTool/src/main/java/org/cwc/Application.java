@@ -32,10 +32,7 @@ public class Application {
             return;
         }
 
-        //Get the filename from arguements and pass it over to the file handler.
-        this.filename = args[args.length - 1];
 
-        this.fileHandler = new FileHandler(this.filename);
 
     }
 }

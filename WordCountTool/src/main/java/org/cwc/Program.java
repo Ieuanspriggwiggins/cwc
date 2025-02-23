@@ -12,5 +12,6 @@ public class Program {
     //Entry point for the program
     public static void main(String[] args) {
         Application app = new Application(args);
+        app.appStart();
     }
 }
